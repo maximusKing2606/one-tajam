@@ -132,6 +132,8 @@ font-size: 13px;
 font-weight: 700;
 text-transform: uppercase;
 }
+
+
 .nav-toggle{
     width: 30px;
     padding: 10px 0;
@@ -153,7 +155,7 @@ text-transform: uppercase;
     height: 3px;
     background-color: #fff;
     position: absolute;
-    top: 50px;
+    top: 15px;
     right: 0;
     bottom: 0;
     left: -20px;
@@ -204,10 +206,15 @@ text-transform: uppercase;
     display: block;
 }
 
+
 .nav__link{
-    margin-left: 20px;
-    color:#fff;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: #fff;
     text-decoration: none;
+    transition: color .2s linear;
 }
 
 .nav__link:hover{
@@ -1235,16 +1242,21 @@ font-size: 14px;
 
     /* nav */
 
-    nav{
-        /* display: none; */
+    .nav{
+        display: none;
     }
     
     .nav.active{
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #4c3b6f;
         display: block;
     }
 
     .nav__link{
-        display: none;
+        display: block;
         margin: 0;
         padding: 8px 20px;
     }

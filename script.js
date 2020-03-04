@@ -11,7 +11,7 @@ $(function(){
 // Fixed Header
     checkScroll(scrollOffset);
 
-    $(window).on("scroll", function(){
+    $(window).on("scroll load resize", function(){
 
      scrollOffset = $(this).scrollTop();
 
@@ -39,9 +39,21 @@ $("[data-scroll]").on("click", function(event){
     $("#nav a").removeClass("active");
     $this.addClass("active");
     
+  
+
     $("html,body").animate({
         scrollTop: blockOffset
     },1000)
     });
+
+    // nav togle
+
+$("#nav__togle").on("click", function(event){
+    event.preventDefault();
+    
+    $(this).toggleClass("active")
+    $("#nav").toggleClass("active");
+    
+    })
 
 });
