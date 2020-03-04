@@ -44,6 +44,13 @@ $("[data-scroll]").on("click", function(event){
     $("html,body").animate({
         scrollTop: blockOffset
     },1000)
+
+    $("nav__link").on("click", function(event){
+        // event.preventDefault();
+
+        $("nav").removeClass("active")
+    })
+
     });
 
     // nav togle
@@ -53,7 +60,17 @@ $("#nav__togle").on("click", function(event){
     
     $(this).toggleClass("active")
     $("#nav").toggleClass("active");
+
     
     })
 
-});
+   
+    $(".nav__link").on("click", function(event){
+        event.preventDefault();
+
+        $(".nav").removeClass("active")
+    })
+
+    });
+
+
